@@ -1,0 +1,27 @@
+{
+  "canisters": {
+    "HackathonContract_backend": {
+      "main": "src/HackathonContract_backend/main.mo",
+      "type": "motoko"
+    },
+    "HackathonContract_frontend": {
+      "dependencies": [
+        "HackathonContract_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/HackathonContract_frontend/src/index.html"
+      },
+      "source": ["src/HackathonContract_frontend"],
+      "type": "assets",
+      "workspace": "HackathonContract_frontend"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
